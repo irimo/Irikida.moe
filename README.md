@@ -1,4 +1,4 @@
-#irikida.moe のソース
+# irikida.moe のソース
 
 ## what is this
 - いりものホームページ、いりも岬のソース
