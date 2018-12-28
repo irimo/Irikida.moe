@@ -60,14 +60,15 @@ h1.di-title-index {
 .di-menu ul {
     list-style:none;
     margin: 0;
+    padding-left: 0;
 }
 
 .di-menu li {
-    width: 91%;
+    width: 100%;
     opacity: 0.58;
     font-size: 20pt;
-    margin: 1em 0 1em -45px;
-    padding: .5em 1.4em;
+    margin: 1em 0;
+    padding: .5em 0;
     background: -webkit-gradient(
     	linear, left top, right top,
     	color-stop(0, #82b8b1),
@@ -91,6 +92,7 @@ h1.di-title-index {
     text-decoration: none;
     width: 100%;
     display:block;
+    text-indent: 1em;
 }
 
 .di-menu li a:hover {
