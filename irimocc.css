@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+body a,
+body a:link {
+    color: #0059ad;
+}
+
+body a:hover,
+body a:active,
+body a:visited {
+    color: #ae74c2;
+}
+
+img {
+    border: 0;
+}
+
+.di-bottom-back img {
+    width: 80px;
+    height: 80px;
+}
+
+/*********************
+* INDEX
+*********************/
+
+h1.di-title-index {
+    color: #ff1493;
+    font-size: 40pt;
+    text-shadow: #ffa07a 4px 4px;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.di-index-contain {
+   background-image: url("./images/top/doppo181110.jpg");
+   width: 100%;
+   margin: 0;
+   padding: 5px 0;
+}
+
+.di-caption-index {
+    color: #8b0000;
+    font-size: 12pt;
+    padding: 10px 1.9em;
+    margin: 20px 0 0;
+}
+
+.di-footer-index {
+    text-align: left;
+    font-size: 12pt;
+    margin: 10px;
+    padding: 20px 1.9em;
+}
+
+.di-menu ul {
+    list-style:none;
+    margin: 0;
+}
+
+.di-menu li {
+    width: 91%;
+    opacity: 0.58;
+    font-size: 20pt;
+    margin: 1em 0 1em -45px;
+    padding: .5em 1.4em;
+    background: -webkit-gradient(
+    	linear, left top, right top,
+    	color-stop(0, #82b8b1),
+    	color-stop(30%, #378f83),
+    	color-stop(100%, #dae0ce)
+    );
+
+    background: linear-gradient(
+        to right,
+        #82b8b1,
+        #378f83 30%,
+        #dae0ce 100%
+    );
+}
+
+.di-menu li a,
+.di-menu li a:link,
+.di-menu li a:active,
+.di-menu li a:visited {
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    display:block;
+}
+
+.di-menu li a:hover {
+    color: #000;
+}
+
+.di-menu-index.di-menu li a:hover::after {
+    color: #ffa3b6;
+    content:"*";
+}
+
+.di-top-icon {
+  width: 75px;
+  height: 75px;
+  margin: 4px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.di-top-icon-mini {
+  width: 40px;
+  height: 40px;
+  margin: 4px;
+  border-radius: 50%;
+  vertical-align: middle;
+}
+
+.di-top-profile {
+  margin: 0;
+}
+
+.di-top-profile-include {
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255,255,255,0.3);
+}
+
+/*********PAGES HEADER************/
+
+body.di-body-pages {
+    width: 100%;
+    margin: 0;
+}
+
+.di-content-pages {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.di-header-pages {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    background-color: #fff;
+    opacity: .8;
+}
+
+.di-header-pages h1.di-title {
+    color: #cc9dac;
+    font-size: 20pt;
+    text-shadow: #efe0e4 4px 4px;
+    vertical-align: middle;
+    float: left;
+    margin: 0;
+    padding: 0 2em;
+}
+
+.di-header-pages h1.di-title a {
+    color: #cc9dac;
+    text-decoration: none;
+}
+
+.di-header-pages h1.di-title a:hover {
+    color: #ae74c2;
+}
+
+.di-header-pages h1 img {
+    width: 25px;
+    height: 25px;
+}
+
+.di-header-pages{
+    float:left;
+    margin: 0;
+    padding: 0 1em;
+}
+
+.di-header-pages ul {
+    padding: 0 2em;
+}
+
+.di-header-pages li {
+    display: inline;
+    white-space: nowrap;
+    background: none;
+    font-size: 10pt;
+    margin: 0px;
+    padding: .1em 1em;
+    color: #227766;
+}
+
+.di-header-pages .di-menu li a,
+.di-header-pages .di-menu li a:link,
+.di-header-pages .di-menu li a:active,
+.di-header-pages .di-menu li a:visited {
+    color: #227766;
+    text-decoration: none;
+}
+.di-header-pages .di-menu li a:hover {
+    color: #ae74c2;
+}
+
+.di-content-pages {
+    margin: 100px 0 0 0;
+    padding: 0px;
+}
+
+/*********PAGES CONTENTS************/
+
+.di-content-pages h2 {
+    opacity: 0.58;
+    font-size: 20pt;
+    margin: 20px 0;
+    padding: .3em 1.4em;
+    color: #fff;
+    background: -webkit-gradient(
+    	linear, left top, right top,
+    	color-stop(0, #82b8b1),
+    	color-stop(30%, #378f83),
+    	color-stop(100%, #dae0ce)
+    );
+
+    background: linear-gradient(
+        to right,
+        #82b8b1,
+        #378f83 30%,
+        #dae0ce 100%
+    );
+}
+.di-content-pages h2 span::after {
+    color: #ffa3b6;
+    content:"*";
+}
+
+.di-content-pages .di-content-letters {
+    margin-left: 30px;
+    margin-bottom: 80px;
+}
+
+.di-content-pages table th {
+    text-align: left;
+    vertical-align: top;
+    background-color: #fff;
+    font-weight: lighter;
+}
+.di-content-pages th,
+.di-content-pages td,
+.di-content-pages table {
+    margin: 0;
+    border: 0;
+    padding: .4em 1em;
+}
+
+.di-content-pages table {
+    margin: 24px 0;
+}
+
+.di-content-pages th,
+.di-content-pages td {
+    border: 1px solid #ccc;
+}
+
+.di-content-pages small {
+    font-size: .75em;
+}
+
+.di-content-pages img {
+    border: 0;
+}

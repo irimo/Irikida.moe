@@ -1,0 +1,281 @@
+/* テンプレ(全部共通) */
+body{
+    text-align:center;
+width:100%;
+	background-color:#FFFFFF;
+	background-position:left top;
+}
+
+#bodystyle{
+	background-color:#FFFFFF;
+	text-align: center;
+margin: 20px auto;
+width:800px;
+
+}
+
+h1#photo_over{
+	marign:0px;
+	font-size: x-small;
+	color: #000000;
+	padding: 260px 0px 10px 240px;
+text-align:left;
+font-weight:lighter;
+}
+.marble{
+color:#FFFF00;
+}
+#soto{
+	border:1px dashed #999999;
+	background-attachment:scroll;
+	background-color:#FFFFFF;
+	background-position:left top;
+	background-repeat:no-repeat;
+	background-image: url(images/logo.jpg);
+	width: 800px;
+}
+
+#soto_ringomaiden{
+	border:1px dashed #999999;
+	background-attachment:scroll;
+	background-color:#FFFFFF;
+	width: 800px;
+}
+div.hr{
+    border:none;
+    border-top:dashed 1px #CCC;
+    border-bottom:dashed 1px #CCC;
+    color:#000;
+}
+span.photoexp{
+color:#777;
+font-size:0.8em;
+}
+h1#maiden_logo{
+color:#FF0000;
+font-size:30pt;
+}
+h3#maiden_logo{
+color:#666666;
+font-weight:normal;
+}
+
+#honbun{
+	margin:10px 40px;
+	color:FB4B2D;
+	font-size:14px;
+	text-align:left;
+	line-height:140%;
+}
+
+#menu{
+text-align:center;
+margin-left:60px;
+}
+
+#cr{
+	color:#757575;
+	font-size: small;
+	padding-top:40px;
+	padding-bottom: 10px;
+	text-align:center;
+}
+
+#cr a:visited,#cr a:link{
+	color: #757575;
+}
+#cr a:hover,#cr a:active{
+color:#000000;
+}
+.menu_bg{
+	background-position:left top;
+	background-repeat:no-repeat;
+	padding:0px 10px;
+	float:left;
+	width:129px;
+	height:63px;
+	text-align:center;
+vertical-align: middle;
+}
+.divclr{
+margin:0px;
+padding:0px;
+clear:both;
+}
+h2.topic{
+	background-position:left top;
+	background-repeat:repeat-x;
+	background-image: url(images/topic_bg.gif);
+	width:760px;
+	height:56px;
+	color:#422D2E;
+	font-size:32px;
+	text-align:left;
+	padding:10px 20px 2px;
+	margin:10px 0px;
+}
+/* indexのメニュー部 */
+.profile_work{
+float:left;
+margin-left:18px;
+}
+.profile{
+	border:3px dotted #999999;
+margin-bottom:10px;
+width:210px;
+}
+.work{
+	border:3px dotted #999999;
+width:210px;
+}
+.products{
+float:left;
+	border:3px dotted #999999;
+margin-left:15px;
+width:210px;
+}
+.link_mail{
+float:left;
+margin-left:15px;
+}
+.link{
+	border:3px dotted #999999;
+margin-bottom:10px;
+width:210px;
+}
+.mail{
+	border:3px dotted #999999;
+width:210px;
+}
+
+.front_yajirusi{
+	margin-top: 8px;
+	margin-right: 4px;
+}
+
+.second_yajirusi{
+	margin-top: 4px;
+	margin-right: 4px;
+}
+
+.front_title{
+	padding-top: 10px;
+	padding-left: 34px;
+	color: #999999;
+	font-size: large;
+	text-decoration: none;
+}
+.front_title a:visited,front_title a:link{
+	color: #999999;
+	font-size: large;
+	text-decoration: none;
+}
+.front_title a:hover,.front_title a:active{
+	color: #999999;
+	font-size: large;
+	text-decoration: underline;
+}
+
+.mini a:visited, .mini, .mini a:link{
+	color: #999999;
+	font-size:medium;
+	text-decoration: none;
+}
+
+.mini a:hover,.mini a:active{
+	color: #999999;
+	font-size:medium;
+	text-decoration: underline;
+}
+
+.actv{
+	color: #999999;
+	text-decoration:overline;
+	font-weight:bold;
+}
+
+.second_title{
+	padding-top: 2px;
+	padding-left: 64px;
+	color: #999999;
+	font-size: large;
+	text-decoration: none;
+}
+.second_title a:visited,.second_title a:link{
+	color: #999999;
+	text-decoration: none;
+}
+.second_title a:hover,.second_title a:active{
+	color: #999999;
+	text-decoration: underline;
+}
+/* タイトルの更新履歴 */
+.whatsnew{
+padding:10px 0px 0px 20px;
+font-size:small;
+color:#CC9966;
+float:left;
+}
+
+.wn-gray{
+color:#999999;
+}
+
+/* コンテンツ・タイトル */
+#cont_include{
+	margin:20px 40px 0px 100px;
+	color: #666666;
+	line-height: 150%;
+	font-size:small;
+}
+
+#cont_title{
+margin-bottom:10px;
+margin-left:40px;
+margin-right:40px;
+padding:8px;
+}
+
+.gototop{
+	text-align: right;
+	padding-right: 40px;
+	font-size: small;
+}
+
+a:link{
+color:#006699;
+}
+a:hover,a:active,a:visited{
+color:#993333;
+}
+
+/* タグにかけるcss */
+h3{
+font-size:medium;
+font-weight:bold;
+color:#666666;
+}
+
+hr{
+border:3px dotted #999999;
+}
+
+.syousai .dl{
+font-size:6pt;
+}
+
+.app_title{
+font-size:13pt;
+}
+.app_exp{
+font-size:9pt;
+margin-left:10px;
+}
+.app_language{
+font-size:9pt;
+color:green;
+}
+.app_caption{
+font-size:13pt;
+color:brown;
+}
