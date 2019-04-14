@@ -29,22 +29,21 @@ img {
 *********************/
 
 h1.di-title-index {
-    color: #ff1493;
+    color: #2a83a2;
     font-size: 40pt;
-    text-shadow: #ffa07a 4px 4px;
+    text-shadow: #a0d8ef 4px 4px;
     vertical-align: middle;
     margin: 0;
 }
 
 .di-index-contain {
-   background-image: url("./images/top/doppo181110.jpg");
    width: 100%;
    margin: 0;
    padding: 5px 0;
 }
 
 .di-caption-index {
-    color: #8b0000;
+    color: #56564b;
     font-size: 12pt;
     padding: 10px 1.9em;
     margin: 20px 0 0;
@@ -63,6 +62,13 @@ h1.di-title-index {
     padding-left: 0;
 }
 
+.di-top-picture {
+    width: 300px;
+    height: 200px;
+    background-image: url("./images/top/top310414.png");
+    background-size: 300px;
+}
+
 .di-menu li {
     width: 100%;
     opacity: 0.58;
@@ -71,16 +77,16 @@ h1.di-title-index {
     padding: .5em 0;
     background: -webkit-gradient(
     	linear, left top, right top,
-    	color-stop(0, #82b8b1),
-    	color-stop(30%, #378f83),
-    	color-stop(100%, #dae0ce)
+    	color-stop(0, #f5b1aa),
+    	color-stop(30%, #ee827c),
+    	color-stop(100%, #b44c97)
     );
 
     background: linear-gradient(
         to right,
-        #82b8b1,
-        #378f83 30%,
-        #dae0ce 100%
+        #f5b1aa,
+        #ee827c 30%,
+        #b44c97 100%
     );
 }
 
@@ -100,7 +106,7 @@ h1.di-title-index {
 }
 
 .di-menu-index.di-menu li a:hover::after {
-    color: #ffa3b6;
+    color: #b8d200;
     content:"*";
 }
 
@@ -153,9 +159,9 @@ body.di-body-pages {
 }
 
 .di-header-pages h1.di-title {
-    color: #cc9dac;
+    color: #e6b422;
     font-size: 20pt;
-    text-shadow: #efe0e4 4px 4px;
+    text-shadow: #c1e4e9 4px 4px;
     vertical-align: middle;
     float: left;
     margin: 0;
@@ -163,7 +169,7 @@ body.di-body-pages {
 }
 
 .di-header-pages h1.di-title a {
-    color: #cc9dac;
+    color: #e6b422;
     text-decoration: none;
 }
 
@@ -260,6 +266,10 @@ body.di-body-pages {
 
 .di-content-pages table {
     margin: 24px 0;
+}
+
+.di-profile-caption {
+  color: #2ca9e1;
 }
 
 .di-content-pages th,
