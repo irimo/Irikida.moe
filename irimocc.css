@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  line-height: 1.8em;
 }
 
 
@@ -27,8 +28,14 @@ img {
 /*********************
 * INDEX
 *********************/
+a,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+}
 
-h1.di-title-index {
+h1.di-title-index
+ {
     color: #2a83a2;
     font-size: 40pt;
     text-shadow: #a0d8ef 4px 4px;
@@ -69,7 +76,8 @@ h1.di-title-index {
     background-size: 300px;
 }
 
-.di-menu li {
+.di-menu li,
+.di-contentspage-title {
     width: 100%;
     opacity: 0.58;
     font-size: 20pt;
@@ -94,7 +102,8 @@ h1.di-title-index {
 .di-menu li a,
 .di-menu li a:link,
 .di-menu li a:active,
-.di-menu li a:visited {
+.di-menu li a:visited,
+.di-contentspage-title {
     color: #fff;
     text-decoration: none;
     width: 100%;
@@ -134,7 +143,8 @@ h1.di-title-index {
   margin: 0;
 }
 
-.di-top-profile-include {
+.di-top-profile-include,
+.di-souvenir-include {
   padding: 20px;
   margin: 20px;
   background: rgba(255,255,255,0.3);
@@ -196,7 +206,8 @@ body.di-body-pages {
     padding: 0 2em;
 }
 
-.di-header-pages li {
+.di-header-pages li,
+ {
     display: inline;
     white-space: nowrap;
     background: none;
@@ -287,4 +298,9 @@ body.di-body-pages {
 
 .di-content-pages img {
     border: 0;
+}
+
+.di-souvenir-passapple {
+  height: 500px;
+  width: auto;
 }
