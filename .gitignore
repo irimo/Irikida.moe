@@ -1,4 +1,4 @@
-count/data/*
+count/data/*.txt
 count/conf.php
 money/
 .DS_Store
