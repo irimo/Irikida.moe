@@ -1,3 +1,4 @@
-count/oxox.dat
+count/data/*
+count/conf.php
 money/
 .DS_Store
