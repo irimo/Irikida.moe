@@ -1,5 +1,6 @@
 <?php
-$filename = "./oxox.dat";
+require_once("./conf.php");
+$filename = $FILE;
 
 $count = file_get_contents($filename);
 $count = intval($count);
