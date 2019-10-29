@@ -3,4 +3,5 @@ SetEnvIf REDIRECT_HTTPS (.*) HTTPS=$1
 RewriteEngine on
 RewriteCond %{ENV:HTTPS} !on
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteRule ^https://irikida.moe/money/(.*) https://irimo.cc/$1 [R=301,L]
 </IfModule>
