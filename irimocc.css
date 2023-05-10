@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.8em;
+  font-family: sans-serif;
 }
 
 
@@ -40,7 +41,7 @@ h1.di-title-index
     font-size: 40pt;
     text-shadow: #a0d8ef 4px 4px;
     vertical-align: middle;
-    margin: 0;
+    margin: 20px;
 }
 
 .di-index-contain {
