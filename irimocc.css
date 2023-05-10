@@ -305,3 +305,11 @@ body.di-body-pages {
   height: 500px;
   width: auto;
 }
+
+.di-gallery-wrap img {
+    max-width: 90vw;
+    max-height: 90vw;
+}
+.di-gallery-wrap {
+    margin-bottom: 20%;
+}
