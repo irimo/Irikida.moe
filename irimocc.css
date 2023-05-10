@@ -1,7 +1,9 @@
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.8em;
+  line-height: 2em;
+  font-family: sans-serif;
+  color: #555555;
 }
 
 
@@ -40,7 +42,10 @@ h1.di-title-index
     font-size: 40pt;
     text-shadow: #a0d8ef 4px 4px;
     vertical-align: middle;
-    margin: 0;
+    margin: 20px;
+}
+h1.di-title-index a {
+    color: #2a83a2;
 }
 
 .di-index-contain {
@@ -53,14 +58,14 @@ h1.di-title-index
     color: #56564b;
     font-size: 12pt;
     padding: 10px 1.9em;
-    margin: 20px 0 0;
+    margin: 20px 0 0 20pt;
 }
 
 .di-footer-index {
     text-align: left;
     font-size: 12pt;
     margin: 10px;
-    padding: 20px 1.9em;
+    padding: 20px 1.9em 20px 34pt;
 }
 
 .di-menu ul {
@@ -109,6 +114,7 @@ h1.di-title-index
     width: 100%;
     display:block;
     text-indent: 1em;
+    font-weight: normal;
 }
 .di-menu li.di-nolink {
   color: #333;
@@ -132,8 +138,8 @@ h1.di-title-index
 }
 
 .di-top-icon-mini {
-  width: 40px;
-  height: 40px;
+  width: 90px;
+  height: 90px;
   margin: 4px;
   border-radius: 50%;
   vertical-align: middle;
@@ -143,11 +149,24 @@ h1.di-title-index
   margin: 0;
 }
 
-.di-top-profile-include,
+.di-top-profile-include {
+    padding: 20px 20px 20px 24pt;
+    margin: 20px;
+    background: rgba(255,255,255,0.3);
+}
 .di-souvenir-include {
-  padding: 20px;
+  padding: 20px 20px 20px 26pt;
   margin: 20px;
   background: rgba(255,255,255,0.3);
+}
+
+.di-title-string {
+    font-size: 38pt;
+}
+.di-title-icon {
+    font-size: 46pt !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 
 /*********PAGES HEADER************/
@@ -285,6 +304,8 @@ body.di-body-pages {
 
 .di-profile-caption {
   color: #2ca9e1;
+  font-size: 2em;
+  line-height: 2em;
 }
 
 .di-content-pages th,
@@ -303,4 +324,14 @@ body.di-body-pages {
 .di-souvenir-passapple {
   height: 500px;
   width: auto;
+}
+
+.di-gallery-wrap img {
+    max-width: 80vw;
+    max-height: 80vw;
+    padding: 0;
+    margin: 0;
+}
+.di-gallery-wrap {
+    margin-bottom: 20%;
 }
