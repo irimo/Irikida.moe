@@ -155,11 +155,10 @@ h1.di-title-index a {
     background: rgba(255,255,255,0.3);
 }
 .di-souvenir-include {
-  padding: 20px 20px 20px 26pt;
-  margin: 20px;
+  margin: 40pt 40pt 40pt 44pt;
+  padding: 0;
   background: rgba(255,255,255,0.3);
 }
-
 .di-title-string {
     font-size: 38pt;
 }
@@ -327,11 +326,16 @@ body.di-body-pages {
 }
 
 .di-gallery-wrap img {
-    max-width: 80vw;
-    max-height: 80vw;
+    max-width: calc(100vw - 20px);
+    max-height: 100vw;
     padding: 0;
-    margin: 0;
+    margin: 0 -40pt 0 -46pt;
 }
 .di-gallery-wrap {
+    margin: 0;
+    padding: 0;
     margin-bottom: 20%;
+}
+.di-top-profile-include a{
+    text-decoration: underline;
 }
