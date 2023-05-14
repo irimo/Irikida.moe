@@ -336,6 +336,18 @@ body.di-body-pages {
     padding: 0;
     margin-bottom: 20%;
 }
+
+.di-comic-wrap img {
+    max-width: calc(100vw - 20px);
+    max-height: 100vw;
+    padding: 0;
+    margin: 0;
+}
+.di-comic-wrap {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20%;
+}
 .di-top-profile-include a{
     text-decoration: underline;
 }
