@@ -336,3 +336,6 @@ body.di-body-pages {
     padding: 0;
     margin-bottom: 20%;
 }
+.di-top-profile-include a{
+    text-decoration: underline;
+}
