@@ -155,11 +155,14 @@ h1.di-title-index a {
     background: rgba(255,255,255,0.3);
 }
 .di-souvenir-include {
-  padding: 20px 20px 20px 26pt;
-  margin: 20px;
+  margin: 0;
+  padding: 0;
   background: rgba(255,255,255,0.3);
 }
-
+.di-gallery-text {
+    margin: 40pt 40pt 40pt 44pt;
+    padding: 0;
+}
 .di-title-string {
     font-size: 38pt;
 }
@@ -327,11 +330,16 @@ body.di-body-pages {
 }
 
 .di-gallery-wrap img {
-    max-width: 80vw;
-    max-height: 80vw;
+    max-width: calc(100vw - 20px);
+    max-height: 100vw;
     padding: 0;
     margin: 0;
+    /* box-sizing: border-box; */
 }
 .di-gallery-wrap {
+    margin: 0;
+    padding: 0;
+}
+.di-gallery-explain {
     margin-bottom: 20%;
 }
