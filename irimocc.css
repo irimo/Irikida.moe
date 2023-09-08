@@ -354,6 +354,9 @@ body.di-body-pages {
 
 /**$AA****/
 .di-school-profile-img {
-    width: 400px;
+    width: calc(100vw - 20px);
     height: auto;
+    max-width: 400px;
+    padding: 0;
+    margin: 0;
 }
