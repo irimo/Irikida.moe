@@ -351,6 +351,10 @@ body.di-body-pages {
 .di-top-profile-include a{
     text-decoration: underline;
 }
+.di-qr {
+    width: 200px;
+    height: auto;
+}
 
 /**$AA****/
 .di-school-profile-img {
