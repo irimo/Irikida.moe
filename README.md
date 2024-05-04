@@ -1,11 +1,10 @@
 # irikida.moe のソース
 
 ## what is this
-- いりものホームページ、いりも岬のソース
+- Irikidaの個人サイトのソース
 - https://irikida.moe/
-- static html
+- all plain static html & css
 
 ## 免責
-- 他のサーバーにおいちゃだめよ
-- ソースの参考はおkです
-- 気になったらプルリクしても大丈夫です。お返事書きますw
+- 他のPublicなところに置かないでください
+- 要望や気になるところありましたらissueのBBSへ
