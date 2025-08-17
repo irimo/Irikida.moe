@@ -364,3 +364,128 @@ body.di-body-pages {
     padding: 0;
     margin: 0;
 }
+/* ベース設定 */
+body {
+  background: #f8fafc;
+  font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.di-index-contain {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  padding: 32px 24px;
+}
+
+header h1 {
+  font-size: 2.2em;
+  margin-bottom: 0.2em;
+  letter-spacing: 0.05em;
+}
+
+.di-title-index a {
+  text-decoration: none;
+  color: #2b7cff;
+}
+
+.di-contentspage-title {
+  font-size: 1.3em;
+  color: #444;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+section {
+  margin-bottom: 2.2em;
+}
+
+h3 {
+  font-size: 1.15em;
+  color: #2b7cff;
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+  border-left: 4px solid #2b7cff;
+  padding-left: 0.5em;
+  background: #f0f7ff;
+  border-radius: 4px;
+}
+
+ul {
+  padding-left: 1.2em;
+  margin-bottom: 1em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+  background: #f6faff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+table td, table th {
+  border: 1px solid #dbeafe;
+  padding: 0.7em 0.5em;
+  font-size: 0.98em;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 2em 0;
+}
+
+.di-qr {
+  width: 140px;
+  height: auto;
+  margin: 1em 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.di-school-profile-img {
+  width: 120px;
+  height: auto;
+  border-radius: 50%;
+  margin: 1em 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+a {
+  color: #2b7cff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #1e40af;
+  text-decoration: none;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 600px) {
+  .di-index-contain {
+    padding: 16px 6px;
+  }
+  header h1 {
+    font-size: 1.4em;
+  }
+  .di-school-profile-img, .di-qr {
+    width: 90px;
+  }
+  table td, table th {
+    font-size: 0.92em;
+    padding: 0.5em 0.3em;
+  }
+}
