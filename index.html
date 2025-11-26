@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,9 +13,11 @@
             font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
             color: #222;
         }
+
         .navbar {
-            box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
         }
+
         .hero {
             background: url('./images/top/top310414.png') center/cover;
             background-attachment: fixed;
@@ -27,6 +30,13 @@
             text-align: center;
             position: relative;
         }
+
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+
         .hero::after {
             content: "";
             position: absolute;
@@ -34,47 +44,56 @@
             background: rgba(44, 62, 80, 0.45);
             z-index: 0;
         }
-        .hero > div {
+
+        .hero>div {
             position: relative;
             z-index: 1;
         }
+
         .hero h1 {
             font-size: 2.5em;
             font-weight: bold;
             margin-bottom: 0.5em;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
         }
+
         .hero p {
             font-size: 1.2em;
             margin-bottom: 1.5em;
-            text-shadow: 0 1px 6px rgba(0,0,0,0.18);
+            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
         }
+
         .hero .btn {
             font-size: 1.1em;
             padding: 0.7em 2em;
             border-radius: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
         }
+
         h2 {
             font-weight: bold;
             margin-bottom: 1em;
             letter-spacing: 0.03em;
         }
+
         .card {
             border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(44,62,80,0.07);
+            box-shadow: 0 2px 16px rgba(44, 62, 80, 0.07);
             transition: transform 0.18s;
             background: #fff;
         }
+
         .card:hover {
             transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 4px 24px rgba(44,62,80,0.12);
+            box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
         }
+
         .card-title {
             font-size: 1.1em;
             font-weight: bold;
             color: #C71585;
         }
+
         .card-img-top {
             width: 100%;
             aspect-ratio: 1/1;
@@ -82,47 +101,36 @@
             border-top-left-radius: 16px;
             border-top-right-radius: 16px;
         }
+
         .btn-magenta {
             background-color: white;
             color: #C71585;
             border: 1px solid #C71585;
             transition: 0.3s;
         }
+
         .btn-magenta:hover {
             background-color: #C71585;
             color: white;
         }
+
         #about .btn {
             min-width: 120px;
             margin-bottom: 8px;
         }
+
         #gallery .btn {
             min-width: 120px;
             margin: 0 8px 8px 0;
             font-weight: bold;
         }
+
         section {
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 2px 12px rgba(44,62,80,0.05);
-            padding: 2em 1.5em;
-            margin-bottom: 2em;
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.5em; }
-            .hero { height: 40vh; min-height: 220px; }
-            .card { margin-bottom: 1.5em; }
-            section { padding: 1em 0.5em; }
-        }
-        footer {
-            background: linear-gradient(90deg,#C71585 0%,#2b7cff 100%);
-            color: #fff;
-            font-size: 1em;
-            letter-spacing: 0.04em;
             border-top: none;
         }
     </style>
 </head>
+
 <body>
     <!-- ナビゲーションバー -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -141,7 +149,7 @@
             </div>
         </div>
     </nav>
-    
+
     <!-- ヒーローセクション -->
     <header class="hero">
         <div>
@@ -150,13 +158,13 @@
             <a href="#projects" class="btn btn-primary">View My Work</a>
         </div>
     </header>
-    
+
     <!-- About セクション -->
     <section id="about" class="container my-5 text-center">
         <h2>About Me</h2>
         <p>
-        約15年間Webエンジニアとして企業に勤務した後、現在はフリーランスとして活動しています。<br>
-        メディア運営やイベント企画など、多様なプロジェクトに携わりながら、幅広い分野で経験を積んでいます。
+            約15年間Webエンジニアとして企業に勤務した後、現在はフリーランスとして活動しています。<br>
+            メディア運営やイベント企画など、多様なプロジェクトに携わりながら、幅広い分野で経験を積んでいます。
         </p>
         <div>
             <a href="https://x.com/moe_irikida" class="btn btn-outline-primary me-2 mb-2">X</a>
@@ -167,27 +175,27 @@
             <a href="https://www.nicovideo.jp/user/137959586" class="btn btn-outline-secondary me-2 mb-2">ニコニコ</a>
         </div>
     </section>
-    
+
     <!-- Gallery セクション -->
     <section id="gallery" class="container my-5">
         <h2 class="text-center">Illustration Gallery</h2>
         <p class="text-center">私のイラスト作品をご覧ください。</p>
         <div class="text-center">
-          <a href="./gallery.html" class="btn btn-success">Gallery</a>
-          <a href="./comic.html" class="btn btn-success">Manga</a>
+            <a href="./gallery.html" class="btn btn-success">Gallery</a>
+            <a href="./comic.html" class="btn btn-success">Manga</a>
         </div>
     </section>
-    
+
     <!-- Projects セクション -->
     <section id="projects" class="container my-5">
         <h2 class="text-center">My Projects</h2>
-        
+
         <div class="row g-3">
             <div class="col-md-4">
                 <div class="card">
-                  <a href="./school.html">
-                    <img src="./images/school/eyecatch.jpeg" class="card-img-top" alt="プログラミング教室">
-                  </a>
+                    <a href="./school.html">
+                        <img src="./images/school/eyecatch.jpeg" class="card-img-top" alt="プログラミング教室">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">プログラミング教室</h5>
                         <p class="card-text">現役フリーランス＆元企業エンジニアが、マンツーマンで丁寧に指導します。お子さまから大人まで、初心者も安心してご参加いただけます。</p>
@@ -196,9 +204,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                  <a href="http://mnlab.sakura.ne.jp/kairo/">
-                    <img src="./images/screenshot/ronri.png" class="card-img-top" alt="論理回路性格診断のスクリーンショット">
-                  </a>
+                    <a href="http://mnlab.sakura.ne.jp/kairo/">
+                        <img src="./images/screenshot/ronri.png" class="card-img-top" alt="論理回路性格診断のスクリーンショット">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">論理回路性格診断</h5>
                         <p class="card-text">心理職監修の、本格的なネタ診断です。</p>
@@ -207,9 +215,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                  <a href="https://mnlab.sakura.ne.jp/garden/">
-                    <img src="./images/screenshot/iridigarden.png" class="card-img-top" alt="IRIDIGARDENのスクリーンショット">
-                  </a>
+                    <a href="https://mnlab.sakura.ne.jp/garden/">
+                        <img src="./images/screenshot/iridigarden.png" class="card-img-top" alt="IRIDIGARDENのスクリーンショット">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">IRIDIGARDEN</h5>
                         <p class="card-text">趣味で作っているフォントの頒布。</p>
@@ -218,9 +226,10 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                  <a href="https://irikida.moe/passapple/index.html">
-                    <img src="https://irikida.moe/passapple/portrait-1.png" class="card-img-top" alt="合格林檎ペイントアプリのスクリーンショット">
-                  </a>
+                    <a href="https://irikida.moe/passapple/index.html">
+                        <img src="https://irikida.moe/passapple/portrait-1.png" class="card-img-top"
+                            alt="合格林檎ペイントアプリのスクリーンショット">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">合格林檎（改修中）</h5>
                         <p class="card-text">果物に絵が描けるペイントアプリ。</p>
@@ -229,9 +238,9 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                  <a href="https://mnlab.sakura.ne.jp/abe/index.html">
-                    <img src="./images/screenshot/abe.png" class="card-img-top" alt="くそみそジェネレーターのスクリーンショット">
-                  </a>
+                    <a href="https://mnlab.sakura.ne.jp/abe/index.html">
+                        <img src="./images/screenshot/abe.png" class="card-img-top" alt="くそみそジェネレーターのスクリーンショット">
+                    </a>
                     <div class="card-body">
                         <h5 class="card-title">くそみそジェネレーター（改修中）</h5>
                         <p class="card-text">くそみそテクニックが流行ったころに作った画像ジェネレーター</p>
@@ -239,16 +248,19 @@
                 </div>
             </div>
         </div>
-      </section>
+    </section>
     <!-- Contact セクション -->
     <section id="contact" class="container my-5">
         <h2 class="text-center">Contact Me</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScomOePyyCtFGrc7wxIB-NEc6uFV8817RFmqDXfmP6owauTdw/viewform?embedded=true" width="100%" height="600" frameborder="0">読み込んでいます…</iframe>
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLScomOePyyCtFGrc7wxIB-NEc6uFV8817RFmqDXfmP6owauTdw/viewform?embedded=true"
+            width="100%" height="600" frameborder="0">読み込んでいます…</iframe>
     </section>
-    
+
     <!-- フッター -->
     <footer class="text-white text-center py-3">
         &copy; 2025 Moe Irikida. All Rights Reserved.
     </footer>
 </body>
+
 </html>
