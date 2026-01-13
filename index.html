@@ -8,14 +8,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <style>
+        :root {
+            --fruit-strawberry: #d17a86;
+            /* くすみストロベリー */
+            --fruit-orange: #d9a27d;
+            /* くすみアプリコット */
+            --fruit-lime: #9bad9a;
+            /* くすみセージグリーン */
+            --fruit-peach: #faf3f0;
+            /* 柔らかなシェルピーチ */
+            --fruit-text: #5d6770;
+            /* 落ち着いたスレートグレー */
+        }
+
         body {
-            background: #f8fafc;
+            background: var(--fruit-peach);
             font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
-            color: #222;
+            color: var(--fruit-text);
         }
 
         .navbar {
-            box-shadow: 0 2px 12px rgba(44, 62, 80, 0.07);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background: linear-gradient(135deg, var(--fruit-strawberry), #c06c78) !important;
         }
 
         .hero {
@@ -41,7 +55,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: rgba(44, 62, 80, 0.45);
+            background: rgba(80, 85, 95, 0.4);
             z-index: 0;
         }
 
@@ -54,79 +68,144 @@
             font-size: 2.5em;
             font-weight: bold;
             margin-bottom: 0.5em;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
         }
 
         .hero p {
             font-size: 1.2em;
             margin-bottom: 1.5em;
-            text-shadow: 0 1px 6px rgba(0, 0, 0, 0.18);
+            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
         }
 
         .hero .btn {
             font-size: 1.1em;
             padding: 0.7em 2em;
             border-radius: 30px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+            background-color: var(--fruit-orange);
+            border-color: var(--fruit-orange);
+            color: white;
+            box-shadow: 0 4px 12px rgba(217, 162, 125, 0.25);
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #c9926c;
+            border-color: #c9926c;
+            transform: translateY(-2px);
         }
 
         h2 {
             font-weight: bold;
-            margin-bottom: 1em;
+            margin-bottom: 1.2em;
             letter-spacing: 0.03em;
+            color: var(--fruit-strawberry);
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--fruit-orange);
+            margin: 8px auto 0;
+            border-radius: 2px;
+            opacity: 0.7;
         }
 
         .card {
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(44, 62, 80, 0.07);
-            transition: transform 0.18s;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
             background: #fff;
+            overflow: hidden;
         }
 
         .card:hover {
-            transform: translateY(-4px) scale(1.03);
-            box-shadow: 0 4px 24px rgba(44, 62, 80, 0.12);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(209, 122, 134, 0.08);
         }
 
         .card-title {
             font-size: 1.1em;
             font-weight: bold;
-            color: #C71585;
+            color: var(--fruit-strawberry);
         }
 
         .card-img-top {
             width: 100%;
             aspect-ratio: 1/1;
             object-fit: cover;
-            border-top-left-radius: 16px;
-            border-top-right-radius: 16px;
+        }
+
+        .btn-primary {
+            background-color: var(--fruit-strawberry);
+            border-color: var(--fruit-strawberry);
+        }
+
+        .btn-primary:hover {
+            background-color: #c06c78;
+            border-color: #c06c78;
         }
 
         .btn-magenta {
             background-color: white;
-            color: #C71585;
-            border: 1px solid #C71585;
+            color: var(--fruit-strawberry);
+            border: 2px solid var(--fruit-strawberry);
             transition: 0.3s;
+            font-weight: bold;
         }
 
         .btn-magenta:hover {
-            background-color: #C71585;
+            background-color: var(--fruit-strawberry);
             color: white;
+        }
+
+        .btn-success {
+            background-color: var(--fruit-lime);
+            border-color: var(--fruit-lime);
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-success:hover {
+            background-color: #899c89;
+            border-color: #899c89;
         }
 
         #about .btn {
             min-width: 120px;
             margin-bottom: 8px;
+            border-radius: 20px;
         }
 
         #gallery .btn {
-            min-width: 120px;
+            min-width: 140px;
             margin: 0 8px 8px 0;
             font-weight: bold;
+            border-radius: 25px;
         }
 
         section {
-            border-top: none;
+            padding: 60px 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--fruit-strawberry), #c06c78);
+            color: white;
+            padding: 50px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+        }
+
+        footer br {
+            margin-bottom: 8px;
+            display: block;
+            content: "";
         }
     </style>
 </head>
@@ -247,6 +326,18 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <a href="https://irimo.cc/">
+                        <img src="./images/screenshot/lowcosttherapy.jpg" class="card-img-top"
+                            alt="くそみそジェネレーターのスクリーンショット">
+                    </a>
+                    <div class="card-body">
+                        <h5 class="card-title">節約セラピー</h5>
+                        <p class="card-text">サラリーがピンチになった時に立ち上げたWordPressのブログ</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Contact セクション -->
@@ -254,12 +345,13 @@
         <h2 class="text-center">Contact Me</h2>
         <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLScomOePyyCtFGrc7wxIB-NEc6uFV8817RFmqDXfmP6owauTdw/viewform?embedded=true"
-            width="100%" height="600" frameborder="0">読み込んでいます…</iframe>
+            width="100%" height="1050" frameborder="0" scrolling="no" style="overflow: hidden;">読み込んでいます…</iframe>
     </section>
 
     <!-- フッター -->
-    <footer class="text-white text-center py-3">
-        &copy; 2025 Moe Irikida. All Rights Reserved.
+    <footer class="text-center py-5">
+        &copy; 2025 Moe Irikida. All Rights Reserved.<br>
+        since 1999.10 / re-open 2011.10 / moved 2018.1
     </footer>
 </body>
 
