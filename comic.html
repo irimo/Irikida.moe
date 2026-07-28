@@ -130,6 +130,14 @@
             display: block;
         }
 
+        .comic-list {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
         .section-title {
             font-weight: bold;
             margin-bottom: 1.2em;
@@ -195,97 +203,77 @@
             <div class="text-center mb-4">
                 <h2 class="section-title">Comics</h2>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/202304-tyaji1.png" alt="ChatGPTのまんが 1ページ目">
-                        <img src="./images/comic/202304-tyaji2.png" alt="ChatGPTのまんが 2ページ目">
-                        <div class="card-body">
-                            <h5 class="card-title">2023.4 ChatGPTのまんが</h5>
-                            <p class="card-text">落としどころとして描いたけど、自分の漫画なんでバズらないんだろ</p>
-                        </div>
+            <div class="comic-list">
+                <div class="card">
+                    <img src="./images/comic/202304-tyaji1.png" alt="ChatGPTのまんが 1ページ目">
+                    <img src="./images/comic/202304-tyaji2.png" alt="ChatGPTのまんが 2ページ目">
+                    <div class="card-body">
+                        <h5 class="card-title">2023.4 ChatGPTのまんが</h5>
+                        <p class="card-text">落としどころとして描いたけど、自分の漫画なんでバズらないんだろ</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/202211-nespe1-1.jpeg" alt="n日後にネスペに受かるJC 1ページ目">
-                        <img src="./images/comic/202211-nespe1-2.jpeg" alt="n日後にネスペに受かるJC 2ページ目">
-                        <div class="card-body">
-                            <h5 class="card-title">2022.11 n日後にネスペに受かるJC</h5>
-                            <p class="card-text">普通にネスペ欲しいのでシリーズ化したい！</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/202211-nespe1-1.jpeg" alt="n日後にネスペに受かるJC 1ページ目">
+                    <img src="./images/comic/202211-nespe1-2.jpeg" alt="n日後にネスペに受かるJC 2ページ目">
+                    <div class="card-body">
+                        <h5 class="card-title">2022.11 n日後にネスペに受かるJC</h5>
+                        <p class="card-text">普通にネスペ欲しいのでシリーズ化したい！</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/202211-hanaugai.jpeg" alt="鼻うがいのマンガ">
-                        <div class="card-body">
-                            <h5 class="card-title">2022.11 鼻うがいのマンガ</h5>
-                            <p class="card-text">2いいね,2RTもらってちょこーっとだけ自信ついた！</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/202211-hanaugai.jpeg" alt="鼻うがいのマンガ">
+                    <div class="card-body">
+                        <h5 class="card-title">2022.11 鼻うがいのマンガ</h5>
+                        <p class="card-text">2いいね,2RTもらってちょこーっとだけ自信ついた！</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/202202-tabi.jpeg" alt="旅記録のマンガ">
-                        <div class="card-body">
-                            <h5 class="card-title">2022.2 旅記録</h5>
-                            <p class="card-text">ブラックリスト載ってたらつらいですね... 知らなかった</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/202202-tabi.jpeg" alt="旅記録のマンガ">
+                    <div class="card-body">
+                        <h5 class="card-title">2022.2 旅記録</h5>
+                        <p class="card-text">ブラックリスト載ってたらつらいですね... 知らなかった</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/202201-tabi.jpeg" alt="旅でタロット占いのマンガ">
-                        <div class="card-body">
-                            <h5 class="card-title">2022.1 旅でタロット占い</h5>
-                            <p class="card-text">コミュニケーションについてちょっと期待しましたw</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/202201-tabi.jpeg" alt="旅でタロット占いのマンガ">
+                    <div class="card-body">
+                        <h5 class="card-title">2022.1 旅でタロット占い</h5>
+                        <p class="card-text">コミュニケーションについてちょっと期待しましたw</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/20080827232404.jpg" alt="謎ギークカップルのマンガ">
-                        <div class="card-body">
-                            <h5 class="card-title">2008.08 謎ギークカップル</h5>
-                            <p class="card-text">ちっちゃくてごめんなさい、ここから大昔のブログのサルベージです</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/20080827232404.jpg" alt="謎ギークカップルのマンガ">
+                    <div class="card-body">
+                        <h5 class="card-title">2008.08 謎ギークカップル</h5>
+                        <p class="card-text">ちっちゃくてごめんなさい、ここから大昔のブログのサルベージです</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/20080720164552.png" alt="PHP奮闘記のマンガ">
-                        <div class="card-body">
-                            <h5 class="card-title">2008.7 PHP奮闘記</h5>
-                            <p class="card-text">こういう小さな失敗がたまらなくおかしかった初学時w</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/20080720164552.png" alt="PHP奮闘記のマンガ">
+                    <div class="card-body">
+                        <h5 class="card-title">2008.7 PHP奮闘記</h5>
+                        <p class="card-text">こういう小さな失敗がたまらなくおかしかった初学時w</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/20080715232039.png" alt="たあちゃんのPHP奮闘記のマンガ">
-                        <div class="card-body">
-                            <h5 class="card-title">2008.5 たあちゃんのPHP奮闘記</h5>
-                            <p class="card-text">この女の子ちょっと思い入れがあるんだよな。由来はtarアーカイブなんだけど、もはやあまり主流じゃない？</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/20080715232039.png" alt="たあちゃんのPHP奮闘記のマンガ">
+                    <div class="card-body">
+                        <h5 class="card-title">2008.5 たあちゃんのPHP奮闘記</h5>
+                        <p class="card-text">この女の子ちょっと思い入れがあるんだよな。由来はtarアーカイブなんだけど、もはやあまり主流じゃない？</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/20080518111410.jpg" alt="りあじゅうのマンガ">
-                        <div class="card-body">
-                            <h5 class="card-title">2008.5 りあじゅう</h5>
-                            <p class="card-text">なんだこれは</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/20080518111410.jpg" alt="りあじゅうのマンガ">
+                    <div class="card-body">
+                        <h5 class="card-title">2008.5 りあじゅう</h5>
+                        <p class="card-text">なんだこれは</p>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="card h-100">
-                        <img src="./images/comic/20080503204201.jpg" alt="しもねたのマンガ">
-                        <div class="card-body">
-                            <h5 class="card-title">2008.5 しもねた</h5>
-                            <p class="card-text">こんなしもねたまんがはもうかかないよ！！！</p>
-                        </div>
+                <div class="card">
+                    <img src="./images/comic/20080503204201.jpg" alt="しもねたのマンガ">
+                    <div class="card-body">
+                        <h5 class="card-title">2008.5 しもねた</h5>
+                        <p class="card-text">こんなしもねたまんがはもうかかないよ！！！</p>
                     </div>
                 </div>
             </div>
