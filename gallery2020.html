@@ -1,208 +1,514 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,user-scalable=0">
-<title>いりも岬 - ギャラリー（-2020）</title>
-<link rel="stylesheet" href="./irimocc.css?20230510" type="text/css">
-<link href='https://fonts.googleapis.com/icon?family=Material+Icons' rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ギャラリー（-2020） | Irikida Moe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            --fruit-strawberry: #d17a86;
+            --fruit-orange: #d9a27d;
+            --fruit-lime: #9bad9a;
+            --fruit-peach: #faf3f0;
+            --fruit-text: #5d6770;
+        }
 
+        body {
+            background: var(--fruit-peach);
+            font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+            color: var(--fruit-text);
+            line-height: 1.8;
+        }
+
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background: linear-gradient(135deg, var(--fruit-strawberry), #c06c78) !important;
+        }
+
+        .hero {
+            background: url('./images/gallery/202012-seiso.jpg') center/cover;
+            background-attachment: fixed;
+            color: #fff;
+            height: 60vh;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(80, 85, 95, 0.5);
+            z-index: 0;
+        }
+
+        .hero>div {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
+            padding: 0 20px;
+        }
+
+        .hero .eyebrow {
+            display: inline-block;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(2px);
+            font-size: 0.9rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4em;
+            font-weight: bold;
+            margin-bottom: 0.6em;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero .btn {
+            font-size: 1.1em;
+            padding: 0.7em 2em;
+            border-radius: 30px;
+            background-color: var(--fruit-orange);
+            border-color: var(--fruit-orange);
+            color: white;
+            box-shadow: 0 4px 12px rgba(217, 162, 125, 0.25);
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #c9926c;
+            border-color: #c9926c;
+            transform: translateY(-2px);
+        }
+
+        .hero .btn-back {
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            color: #fff;
+            box-shadow: none;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero .btn-back:hover {
+            background: rgba(255, 255, 255, 0.28);
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(209, 122, 134, 0.08);
+        }
+
+        .card-title {
+            font-size: 1em;
+            font-weight: bold;
+            color: var(--fruit-strawberry);
+        }
+
+        .card-img-top {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 1.2em;
+            letter-spacing: 0.03em;
+            color: var(--fruit-strawberry);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--fruit-orange);
+            margin: 8px auto 0;
+            border-radius: 2px;
+            opacity: 0.7;
+        }
+
+        .btn-success {
+            background-color: var(--fruit-lime);
+            border-color: var(--fruit-lime);
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-success:hover {
+            background-color: #899c89;
+            border-color: #899c89;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--fruit-strawberry), #c06c78);
+            color: white;
+            padding: 50px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+        }
+    </style>
 </head>
+
 <body>
-<div class="di-index-contain">
-  <h1 class="di-title-index">
-    <a href="./index.html"><span class="di-title-string">いりも岬</span></a>
-  </h1>
-    <h2 class="di-contentspage-title"><span class="material-icons">collections</span> ギャラリー（-2020）</h2>
-<div class="di-souvenir-include">
-2020までに描いたイラストです。
-上が新しめです。<br>
-<br>
-<br>
-<br>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Irikida Moe's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="./gallery.html">最新のイラスト</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./comic.html">Manga</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<div class="di-gallery-wrap">
-  <a href="./images/gallery/202012-seiso.jpg"><img src="./images/gallery/202012-seiso.jpg"></a>
-<p class="di-gallery-explain">
-  2020.12 オリジナルぱっつんさん<br>
-  清楚系女子すきです
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202012-pattun.jpg"><img src="./images/gallery/202012-pattun.jpg"></a>
-<p class="di-gallery-explain">
-  2020.12 オリジナルぱっつんさん<br>
-  髪がサラサラにできておきにです
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202012-jk.jpg"><img src="./images/gallery/202012-jk.jpg"></a>
-<p class="di-gallery-explain">
-  2020.12 年納めJK<br>
-  制服フェチなので一時期めっちゃセーラー服描いてた（漫画の影響もある）
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202011-ruru.jpg"><img src="./images/gallery/202011-ruru.jpg"></a>
-<p class="di-gallery-explain">
-  2020.11 鈴原るるちゃん<br>
-  プレゼント　いろんな色使うの楽しかった
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202010-waityare.jpg"><img src="./images/gallery/202010-waityare.jpg"></a>
-<p class="di-gallery-explain">
-  2020.10 WILD CHALLENGER x HYPNOSISMIC<br>
-  ボーボボもヒプマイも大好きです
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202010-lambda.jpg"><img src="./images/gallery/202010-lambda.jpg"></a>
-<p class="di-gallery-explain">
-  2020.10 飴村乱数くん<br>
-  ヒプマイのFling Posseにどハマりし、イラスト沢山描きました
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202009-partyparrot.jpg"><img src="./images/gallery/202009-partyparrot.jpg"></a>
-<p class="di-gallery-explain">
-  2020.9 Party Parrot<br>
-  Party Parrot大大大好きです。本家と数学のチャンネルしか存じ上げませんが、<br>
-  現役で作ってる方のチャンネルはホイホイ登録しますので、情報提供よろしくお願いします。
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202008-yzak.jpg"><img src="./images/gallery/202008-yzak.jpg"></a>
-<p class="di-gallery-explain">
-  2020.8 謎髪・謎服の方<br>
-  この髪型は、世代的にガンダムSEEDのあの人を思い浮かべてしまう！
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202008-inochinokagayakikun.jpg"><img src="./images/gallery/202008-inochinokagayakikun.jpg"></a>
-<p class="di-gallery-explain">
-  2020.8 命の輝きくん x ロリコン<br>
-  パロディは得意です......
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202007-holoholo.jpg"><img src="./images/gallery/202007-holoholo.jpg"></a>
-<p class="di-gallery-explain">
-  2020.7 ホロホロレンズ<br>
-  またコアなネタをw
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202005-mbp.jpg"><img src="./images/gallery/202005-mbp.jpg"></a>
-<p class="di-gallery-explain">
-  2020.5 無機物擬人化<br>
-  無機物に情緒を込めるタイプなので、こういうののフェチです
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202005-fugen.jpg"><img src="./images/gallery/202005-fugen.jpg"></a>
-<p class="di-gallery-explain">
-  2020.5 普賢真人＠封神演義<br>
-  学生時代描きまくったので、さらさらと描けます。また今の感性で読みたいな〜
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/202005-bigbrother.jpg"><img src="./images/gallery/202005-bigbrother.jpg"></a>
-<p class="di-gallery-explain">
-  2020.5 Big Brother x Windows<br>
-  Windowsのシステム音のMADがかなり好きなのですが、平沢進さんの曲のMADにどハマりして勢いで描きました。<br>
-  こういうド衝動のために絵の練習を続けているのですが、なかなかうまく描けないっすね。。
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201903-kirin.jpg"><img src="./images/gallery/201903-kirin.jpg"></a>
-<p class="di-gallery-explain">
-  2019.3 麒麟が逆立ちしたピアス<br>
-  ジッタリンジンの名曲から引用しました。どんなのだったのだろう？
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201811-doppo.jpg"><img src="./images/gallery/201811-doppo.jpg"></a>
-<p class="di-gallery-explain">
-  2018.11 観音坂独歩さん<br>
-  リーマンはいいね...!
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201810-dice.jpg"><img src="./images/gallery/201810-dice.jpg"></a>
-<p class="di-gallery-explain">
-  2018.10 有栖川帯統くん<br>
-  ヒプマイにハマるきっかけとなった帯統くん。ギャンブル狂いダメ男子...思い入れがあります。
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201809-posse.jpg"><img src="./images/gallery/201809-posse.jpg"></a>
-<p class="di-gallery-explain">
-  2018.9 シブヤディビジョン FlingPosse<br>
-  トリオ良すぎる...（語彙力喪失）
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201604-ewokakujikannagakusiro.jpg"><img src="./images/gallery/201604-ewokakujikannagakusiro.jpg"></a>
-<p class="di-gallery-explain">
-  2016.4 習作 雑誌を参考にして<br>
-  アナログで変な色使って描くのが楽しいかもしれん。また画材を集めようかな。
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201512-elshadai.jpg"><img src="./images/gallery/201512-elshadai.jpg"></a>
-<p class="di-gallery-explain">
-  2015.12 こんな装備で大丈夫か？<br>
-  割と心情風景を描いたので、思い入れがある絵です。
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201511-tominaga.jpg"><img src="./images/gallery/201511-tominaga.jpg"></a>
-<p class="di-gallery-explain">
-  2015.11 冨永大貴＠インベスターZ<br>
-  インベスターZ復活してくれ〜、または同人をもっとくれ〜
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201408-air.jpg"><img src="./images/gallery/201408-air.jpg"></a>
-<p class="di-gallery-explain">
-  2014.8 神尾観鈴＠AIR<br>
-  AIR推しです（ドーン）夏影エモすぎる
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/201003-brs.jpg"><img src="./images/gallery/201003-brs.jpg"></a>
-<p class="di-gallery-explain">
-  2010.3 ブラック★ロックシューターちゃん<br>
-  アナログで下書きして、スキャンしてCGソフトでスポイトとりながら塗りました。
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/200906-re.jpg"><img src="./images/gallery/200906-re.jpg"></a>
-<p class="di-gallery-explain">
-  2009.6 初音ミクさん<br>
-  ちょっとシチュとしては気に入っているので、MMDとかでガチ目に再現したい気がする（誰かやってw）
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/200808-tensen.jpg"><img src="./images/gallery/200808-tensen.jpg"></a>
-<p class="di-gallery-explain">
-  2008.8 天化たれ＆蝉玉（同人誌の表紙）<br>
-  けっこう、髪と背景が気に入っていて、大昔の絵ですが載せました。
-</p>
-</div>
-<div class="di-gallery-wrap">
-<a href="./images/gallery/200807-wimmatsuda.jpg"><img src="./images/gallery/200807-wimmatsuda.jpg"></a>
-<p class="di-gallery-explain">
-  2008.7 ワールドイズマイン（ボカロ曲） x 神さま＠Waqwaq<br>
-  ダブルパロやりまくり人間なので、ちょっと描いてみました。
-</p>
-</div>
-こんな奥まで見てくださって嬉しいです。<br>
-<a href="./gallery.html">&lt;&lt;最新のイラスト</a>
-</div>
-</div>
-</div>
+    <header class="hero">
+        <div>
+            <span class="eyebrow">Illustration Gallery -2020</span>
+            <h1>ギャラリー（-2020）</h1>
+            <p>2020までに描いたイラストです。上が新しめです。</p>
+            <a href="./gallery.html" class="btn btn-back">← 最新のイラストへ戻る</a>
+        </div>
+    </header>
 
+    <main class="container">
+        <section id="gallery">
+            <div class="text-center mb-4">
+                <h2 class="section-title">Illustrations</h2>
+            </div>
+            <div class="row g-3">
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202012-seiso.jpg" target="_blank">
+                            <img src="./images/gallery/202012-seiso.jpg" class="card-img-top" alt="オリジナルぱっつんさんのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.12 オリジナルぱっつんさん</h5>
+                            <p class="card-text">清楚系女子すきです</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202012-pattun.jpg" target="_blank">
+                            <img src="./images/gallery/202012-pattun.jpg" class="card-img-top" alt="オリジナルぱっつんさんのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.12 オリジナルぱっつんさん</h5>
+                            <p class="card-text">髪がサラサラにできておきにです</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202012-jk.jpg" target="_blank">
+                            <img src="./images/gallery/202012-jk.jpg" class="card-img-top" alt="年納めJKのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.12 年納めJK</h5>
+                            <p class="card-text">制服フェチなので一時期めっちゃセーラー服描いてた（漫画の影響もある）</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202011-ruru.jpg" target="_blank">
+                            <img src="./images/gallery/202011-ruru.jpg" class="card-img-top" alt="鈴原るるちゃんのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.11 鈴原るるちゃん</h5>
+                            <p class="card-text">プレゼント　いろんな色使うの楽しかった</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202010-waityare.jpg" target="_blank">
+                            <img src="./images/gallery/202010-waityare.jpg" class="card-img-top" alt="WILD CHALLENGER x HYPNOSISMICのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.10 WILD CHALLENGER x HYPNOSISMIC</h5>
+                            <p class="card-text">ボーボボもヒプマイも大好きです</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202010-lambda.jpg" target="_blank">
+                            <img src="./images/gallery/202010-lambda.jpg" class="card-img-top" alt="飴村乱数くんのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.10 飴村乱数くん</h5>
+                            <p class="card-text">ヒプマイのFling Posseにどハマりし、イラスト沢山描きました</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202009-partyparrot.jpg" target="_blank">
+                            <img src="./images/gallery/202009-partyparrot.jpg" class="card-img-top" alt="Party Parrotのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.9 Party Parrot</h5>
+                            <p class="card-text">Party Parrot大大大好きです。本家と数学のチャンネルしか存じ上げませんが、現役で作ってる方のチャンネルはホイホイ登録しますので、情報提供よろしくお願いします。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202008-yzak.jpg" target="_blank">
+                            <img src="./images/gallery/202008-yzak.jpg" class="card-img-top" alt="謎髪・謎服の方のイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.8 謎髪・謎服の方</h5>
+                            <p class="card-text">この髪型は、世代的にガンダムSEEDのあの人を思い浮かべてしまう！</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202008-inochinokagayakikun.jpg" target="_blank">
+                            <img src="./images/gallery/202008-inochinokagayakikun.jpg" class="card-img-top" alt="命の輝きくん x ロリコンのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.8 命の輝きくん x ロリコン</h5>
+                            <p class="card-text">パロディは得意です......</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202007-holoholo.jpg" target="_blank">
+                            <img src="./images/gallery/202007-holoholo.jpg" class="card-img-top" alt="ホロホロレンズのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.7 ホロホロレンズ</h5>
+                            <p class="card-text">またコアなネタをw</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202005-mbp.jpg" target="_blank">
+                            <img src="./images/gallery/202005-mbp.jpg" class="card-img-top" alt="無機物擬人化のイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.5 無機物擬人化</h5>
+                            <p class="card-text">無機物に情緒を込めるタイプなので、こういうののフェチです</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202005-fugen.jpg" target="_blank">
+                            <img src="./images/gallery/202005-fugen.jpg" class="card-img-top" alt="普賢真人＠封神演義のイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.5 普賢真人＠封神演義</h5>
+                            <p class="card-text">学生時代描きまくったので、さらさらと描けます。また今の感性で読みたいな〜</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/202005-bigbrother.jpg" target="_blank">
+                            <img src="./images/gallery/202005-bigbrother.jpg" class="card-img-top" alt="Big Brother x Windowsのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2020.5 Big Brother x Windows</h5>
+                            <p class="card-text">Windowsのシステム音のMADがかなり好きなのですが、平沢進さんの曲のMADにどハマりして勢いで描きました。こういうド衝動のために絵の練習を続けているのですが、なかなかうまく描けないっすね。。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201903-kirin.jpg" target="_blank">
+                            <img src="./images/gallery/201903-kirin.jpg" class="card-img-top" alt="麒麟が逆立ちしたピアスのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2019.3 麒麟が逆立ちしたピアス</h5>
+                            <p class="card-text">ジッタリンジンの名曲から引用しました。どんなのだったのだろう？</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201811-doppo.jpg" target="_blank">
+                            <img src="./images/gallery/201811-doppo.jpg" class="card-img-top" alt="観音坂独歩さんのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2018.11 観音坂独歩さん</h5>
+                            <p class="card-text">リーマンはいいね...!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201810-dice.jpg" target="_blank">
+                            <img src="./images/gallery/201810-dice.jpg" class="card-img-top" alt="有栖川帯統くんのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2018.10 有栖川帯統くん</h5>
+                            <p class="card-text">ヒプマイにハマるきっかけとなった帯統くん。ギャンブル狂いダメ男子...思い入れがあります。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201809-posse.jpg" target="_blank">
+                            <img src="./images/gallery/201809-posse.jpg" class="card-img-top" alt="シブヤディビジョン FlingPosseのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2018.9 シブヤディビジョン FlingPosse</h5>
+                            <p class="card-text">トリオ良すぎる...（語彙力喪失）</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201604-ewokakujikannagakusiro.jpg" target="_blank">
+                            <img src="./images/gallery/201604-ewokakujikannagakusiro.jpg" class="card-img-top" alt="習作 雑誌を参考にしてのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2016.4 習作 雑誌を参考にして</h5>
+                            <p class="card-text">アナログで変な色使って描くのが楽しいかもしれん。また画材を集めようかな。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201512-elshadai.jpg" target="_blank">
+                            <img src="./images/gallery/201512-elshadai.jpg" class="card-img-top" alt="こんな装備で大丈夫か？のイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2015.12 こんな装備で大丈夫か？</h5>
+                            <p class="card-text">割と心情風景を描いたので、思い入れがある絵です。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201511-tominaga.jpg" target="_blank">
+                            <img src="./images/gallery/201511-tominaga.jpg" class="card-img-top" alt="冨永大貴＠インベスターZのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2015.11 冨永大貴＠インベスターZ</h5>
+                            <p class="card-text">インベスターZ復活してくれ〜、または同人をもっとくれ〜</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201408-air.jpg" target="_blank">
+                            <img src="./images/gallery/201408-air.jpg" class="card-img-top" alt="神尾観鈴＠AIRのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2014.8 神尾観鈴＠AIR</h5>
+                            <p class="card-text">AIR推しです（ドーン）夏影エモすぎる</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/201003-brs.jpg" target="_blank">
+                            <img src="./images/gallery/201003-brs.jpg" class="card-img-top" alt="ブラック★ロックシューターちゃんのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2010.3 ブラック★ロックシューターちゃん</h5>
+                            <p class="card-text">アナログで下書きして、スキャンしてCGソフトでスポイトとりながら塗りました。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/200906-re.jpg" target="_blank">
+                            <img src="./images/gallery/200906-re.jpg" class="card-img-top" alt="初音ミクさんのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2009.6 初音ミクさん</h5>
+                            <p class="card-text">ちょっとシチュとしては気に入っているので、MMDとかでガチ目に再現したい気がする（誰かやってw）</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/200808-tensen.jpg" target="_blank">
+                            <img src="./images/gallery/200808-tensen.jpg" class="card-img-top" alt="天化たれ＆蝉玉（同人誌の表紙）のイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2008.8 天化たれ＆蝉玉（同人誌の表紙）</h5>
+                            <p class="card-text">けっこう、髪と背景が気に入っていて、大昔の絵ですが載せました。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-6">
+                    <div class="card h-100">
+                        <a href="./images/gallery/200807-wimmatsuda.jpg" target="_blank">
+                            <img src="./images/gallery/200807-wimmatsuda.jpg" class="card-img-top" alt="ワールドイズマイン（ボカロ曲） x 神さま＠Waqwaqのイラスト">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">2008.7 ワールドイズマイン（ボカロ曲） x 神さま＠Waqwaq</h5>
+                            <p class="card-text">ダブルパロやりまくり人間なので、ちょっと描いてみました。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4">こんな奥まで見てくださって嬉しいです。</p>
+            <div class="text-center">
+                <a href="./gallery.html" class="btn btn-success">&lt;&lt; 最新のイラスト</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-5">
+        &copy; 2025 Moe Irikida. All Rights Reserved.<br>
+        since 1999.10 / re-open 2011.10 / moved 2018.1
+    </footer>
 </body>
+
 </html>

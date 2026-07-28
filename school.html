@@ -1,155 +1,403 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,user-scalable=0">
-<title>Worms Know - プログラミング教室</title>
-<link rel="stylesheet" href="./irimocc.css?20230907" type="text/css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<style>
-body {
-  background: #f8fafc;
-  font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
-  color: #222;
-  line-height: 1.8;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>プログラミング教室 | Irikida Moe</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        :root {
+            --fruit-strawberry: #d17a86;
+            --fruit-orange: #d9a27d;
+            --fruit-lime: #9bad9a;
+            --fruit-peach: #faf3f0;
+            --fruit-text: #5d6770;
+        }
 
-.di-index-contain {
-  max-width: 800px;
-  margin: auto;
-  padding: 20px;
-}
+        body {
+            background: var(--fruit-peach);
+            font-family: 'Segoe UI', 'Hiragino Sans', 'Meiryo', sans-serif;
+            color: var(--fruit-text);
+            line-height: 1.8;
+        }
 
-.di-index-contain p,
-.di-index-contain ul,
-.di-index-contain li,
-.di-index-contain h3,
-.di-index-contain h2,
-.di-index-contain h1,
-.di-index-contain table {
-  margin-bottom: 1.5em;
-}
-</style>
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            background: linear-gradient(135deg, var(--fruit-strawberry), #c06c78) !important;
+        }
+
+        .hero {
+            background: url('./images/school/eyecatch.jpeg') center/cover;
+            background-attachment: fixed;
+            color: #fff;
+            height: 60vh;
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(80, 85, 95, 0.55);
+            z-index: 0;
+        }
+
+        .hero>div {
+            position: relative;
+            z-index: 1;
+            max-width: 760px;
+            padding: 0 20px;
+        }
+
+        .hero .eyebrow {
+            display: inline-block;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(2px);
+            font-size: 0.9rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4em;
+            font-weight: bold;
+            margin-bottom: 0.6em;
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+        }
+
+        .hero p {
+            font-size: 1.1em;
+            margin-bottom: 1.5em;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero .btn {
+            font-size: 1.1em;
+            padding: 0.7em 2em;
+            border-radius: 30px;
+            background-color: var(--fruit-orange);
+            border-color: var(--fruit-orange);
+            color: white;
+            box-shadow: 0 4px 12px rgba(217, 162, 125, 0.25);
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .hero .btn:hover {
+            background-color: #c9926c;
+            border-color: #c9926c;
+            transform: translateY(-2px);
+        }
+
+        .hero .btn-back {
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            color: #fff;
+            box-shadow: none;
+            backdrop-filter: blur(2px);
+        }
+
+        .hero .btn-back:hover {
+            background: rgba(255, 255, 255, 0.28);
+            border-color: #fff;
+            color: #fff;
+        }
+
+        .card {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .card-title {
+            font-size: 1.15em;
+            font-weight: bold;
+            color: var(--fruit-strawberry);
+        }
+
+        .section-title {
+            font-weight: bold;
+            margin-bottom: 1.2em;
+            letter-spacing: 0.03em;
+            color: var(--fruit-strawberry);
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 40px;
+            height: 3px;
+            background: var(--fruit-orange);
+            margin: 8px auto 0;
+            border-radius: 2px;
+            opacity: 0.7;
+        }
+
+        .card h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: var(--fruit-strawberry);
+            margin-top: 1.6em;
+            margin-bottom: 0.7em;
+            border-left: 4px solid var(--fruit-orange);
+            padding-left: 0.6em;
+        }
+
+        .card h3:first-child {
+            margin-top: 0;
+        }
+
+        .card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1em 0;
+        }
+
+        .card table td {
+            border: 1px solid #eee0da;
+            padding: 0.7em 0.8em;
+            vertical-align: top;
+        }
+
+        .di-school-profile-img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-success {
+            background-color: var(--fruit-lime);
+            border-color: var(--fruit-lime);
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-success:hover {
+            background-color: #899c89;
+            border-color: #899c89;
+        }
+
+        section {
+            padding: 40px 0;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--fruit-strawberry), #c06c78);
+            color: white;
+            padding: 50px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+            letter-spacing: 0.05em;
+        }
+    </style>
 </head>
+
 <body>
-<div class="di-index-contain">
-  <h1 class="text-center">
-    <a href="./index.html"><span class="di-title-string">irikida.moe</span></a>
-  </h1>
-  <h2 class="display-5 fw-bold text-center mb-4">💻プログラミング教室</h2>
-  <div>
-    <p><strong>プログラミング教室「ダラーエーエー」</strong>は、主に小学生〜高校生を対象とした、オンラインプログラミング教室です。</p>
-    <p>プログラミング必修化にあたって、つまづいてしまったり、怖くなってしまっているお子さん向けに、懇切丁寧に指導していきます。</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">Irikida Moe's Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#price">料金</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">お問い合わせ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#profile">講師紹介</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <h3>どこで授業するの？</h3>
-    <p>方法としては、オンライン上でお互いの画面を出しながら、プログラミングを教えてていくことを想定しています。<br>
-      交通費実費（追加費用なし）にて、対面授業も可能です。</p>
-    <h3>何を教えてくれるの？</h3>
-    <p>
-      特にこだわりがなければ、MITが開発している子供向けプログラミング言語「Scratch」を教材にすることを想定しています。
-    </p>
-    <p>
-      <a href="https://scratch.mit.edu">Scratch公式のみんなの作品集</a>を見て、アイデアをふくらませていてくださいね。<br>
-      講師は簡単なイラストが描けるので、使用するにあたって著作権の心配のないイラストをなんでも使うことができます。<br>
-      アニメ関連の作品も作ることが可能です。（ネット公開は、公式サイトを確認して大丈夫だったらになります）
-    </p>
-    <p>
-      こだわりがありましたら、なんでも教えることはできます。その際、どう教えるか練るなどの時間をいただくことがあります。
-    </p>
-    <h3>料金について</h3>
-    <p>はじまりたての教室です。<strong>モニターを募集</strong>しております。
-      <ul>
-        <li>初回相談無料 (目安: 1時間)</li>
-        <li>無料相談の後、授業はすべてモニター価格で一回330円 (延長OK・延長料金なし、疲れてしまうので目安1時間) </li>
-        <li>Zoom または Google Meet</li>
-        <li>YouTubeに授業風景サンプルをUPさせていただける、顔出しOKモニターの方も募集しております。<br>
-        モニターの方は、無料で受けていただくことができます。</li>
-      </ul>
-      お子さんのみでも、保護者の方だけでも、お子さんと保護者の方がご一緒でも、<br>
-      お友達と一緒でも、いずれの受講スタイルでもOKです。
-    </p>
+    <header class="hero">
+        <div>
+            <span class="eyebrow">Programming School</span>
+            <h1>プログラミング教室</h1>
+            <p>お子さまから大人まで、マンツーマンで丁寧に指導するオンラインプログラミング教室です。</p>
+            <a href="./index.html" class="btn btn-back">← TOPへ戻る</a>
+        </div>
+    </header>
 
-    <p>初回の無料相談や、事前のテキストでのヒアリングで、教室に期待することをお聞かせください。<br>
-      音声のみ、またはチャット相談でも大丈夫です。その際はお金はかかりません。
-    </p>
-    <h3>どんな生徒を想定しているの？</h3>
-    <p>
-      <ul>
-        <li>プログラミング必修化に備えて、お子さんにプログラミング教室に通わせたいが、近所に教室がない</li>
-        <li>プログラミングがお子さんに向いているかわからないため、どんなものか少し知りたい</li>
-        <li>お子さんの理系センスに自信がなく、プログラミング必修化の際についていけない可能性がある</li>
-        <li>などなど...</li>
-      </ul>
-    </p>
-    <hr>
-    <h3>お問い合わせ</h3>
-    <p>お気軽に、<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfjght5i-M46ChTfmv_MHTf9o5BMrvoffP0sl92t1y2f2Mnbg/viewform">こちらのGoogleフォーム</a>からご連絡ください。<br>
-      Googleフォーム以外を使いたいという方は、以下のフォーマットから直接メールをお送りください。<br>
-      SNSをご存じでしたら、そちらからでも大丈夫です。<br>
-      <strong>メールアドレスは、スパム対策のため、[ここにアットマークを記載]の部分を@に置き換えてください。</strong>
+    <main class="container">
+        <section id="about">
+            <div class="text-center mb-4">
+                <h2 class="section-title">About</h2>
+            </div>
+            <div class="card">
+                <div class="card-body p-4 p-lg-5">
+                    <p><strong>プログラミング教室「ダラーエーエー」</strong>は、主に小学生〜高校生を対象とした、オンラインプログラミング教室です。</p>
+                    <p>プログラミング必修化にあたって、つまづいてしまったり、怖くなってしまっているお子さん向けに、懇切丁寧に指導していきます。</p>
 
-      <table border=1>
-      <tr>
-        <td>宛先</td><td>sakurapancakeore[ここにアットマークを記載]gmail.com</td>
-      </tr>
-      <tr>
-        <td>ご連絡先</td><td>メール送信元に返信します。</td>
-      </tr>
-      <tr>
-        <td>タイトル</td><td>プログラミング教室無料相談希望</td>
-      </tr>
-      <tr>
-        <td>本文</td>
-        <td>月〜土　11:00am〜21:00まで<br>
-          <br>
-          第1候補日時:<br>
-          <br>
-          第2候補日時:<br>
-          <br>
-          第3候補日時:
-        </td>
-      </tr>
-      </table>
-    </p>
-    <hr>
-    <h3>大人には教えていないの？</h3>
-    <p>メインではないのですが、大学生〜高齢者の方のプログラミング教室・相談も承っています。
-      <ul>
-        <li>社内でIT技術の資格試験を取るように言われたが、どうしてもわからないところがある</li>
-        <li>実装上の悩み、難しい分野のガチめの相談</li>
-        <li>etc,etc...</li>
-        <ul>
-          
-          <li>講師の専門外の分野は、2週間予習時間を頂ければお答えできます。その際は、事前にご相談ください。(追加料金なし)</li>
-          <li>報奨金が出ている分野に関しては、尽力はしますが、そのものずばりの指摘はおそらくできかねます。能力不足のためです。ただし、ヒントは出せる可能性は少しあります。</li>
-        </ul>
-        <li>他、コンピューターのどんな悩みでもお話を聞きます。内容によっては手に余る場合がありますが、できるだけお応えしたい方針です。</li>
-      </ul>
-      お気軽にお問い合わせください。メールが反応しやすいですが、他の連絡手段をご存知でしたらそちらからでも大丈夫です。<br>
-      チャット相談に関してはメールで行っています。<br>
-      学習のロードマップを立て、定期的に授業をするなどの提案も大歓迎ですので、お気軽にどうぞ！<br>
-      <br>
-      技術的なことになると、大人の場合は一回1時間ほどで3000円(2023.7.25-)になりますが、<br>
-      それ以外のことは素人ですので、無料でご相談に乗ります。
-    </p>
-    <h3>講師紹介</h3>
-    <p>
-      いりきだ もえ<br>
-      <img src="./images/fb_face.jpg" alt="VTuberアバターのイラストです。自作です。" class="di-school-profile-img"><br>
-      1986年生まれ。女性。神奈川県横浜市出身。<br>
-      フェリス女学院中高卒業後、Macromedia Flashの仕事がしたくて横浜デジタルアーツ専門学校に入学。<br>
-      Flashはセンスの関係で諦め、卒業後はWebエンジニアとして株式会社ドワンゴに新卒入社。<br>
-      ニコニコ動画の黎明期からの道のりを内部から眺めていました。<br>
-      2022年10月にドワンゴを退職し、フリーランスのエンジニアとして活動しています。<br>
-      子どもはいませんが、子どもが好きなので、当教室を開講しました。<br>
-      趣味は絵を描くこと、VTuber配信鑑賞、カラオケ、乗り鉄、読書、絵を描くこと。<br>
-      <a href="https://irimo.github.io">さらに詳しいことはこちらに書いています。</a>
+                    <h3>どこで授業するの？</h3>
+                    <p>方法としては、オンライン上でお互いの画面を出しながら、プログラミングを教えてていくことを想定しています。<br>
+                        交通費実費（追加費用なし）にて、対面授業も可能です。</p>
 
+                    <h3>何を教えてくれるの？</h3>
+                    <p>
+                        特にこだわりがなければ、MITが開発している子供向けプログラミング言語「Scratch」を教材にすることを想定しています。
+                    </p>
+                    <p>
+                        <a href="https://scratch.mit.edu">Scratch公式のみんなの作品集</a>を見て、アイデアをふくらませていてくださいね。<br>
+                        講師は簡単なイラストが描けるので、使用するにあたって著作権の心配のないイラストをなんでも使うことができます。<br>
+                        アニメ関連の作品も作ることが可能です。（ネット公開は、公式サイトを確認して大丈夫だったらになります）
+                    </p>
+                    <p>
+                        こだわりがありましたら、なんでも教えることはできます。その際、どう教えるか練るなどの時間をいただくことがあります。
+                    </p>
 
-    </p>
-  </div>
-</div>
+                    <h3>どんな生徒を想定しているの？</h3>
+                    <ul>
+                        <li>プログラミング必修化に備えて、お子さんにプログラミング教室に通わせたいが、近所に教室がない</li>
+                        <li>プログラミングがお子さんに向いているかわからないため、どんなものか少し知りたい</li>
+                        <li>お子さんの理系センスに自信がなく、プログラミング必修化の際についていけない可能性がある</li>
+                        <li>などなど...</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
+        <section id="price">
+            <div class="text-center mb-4">
+                <h2 class="section-title">料金について</h2>
+            </div>
+            <div class="card">
+                <div class="card-body p-4 p-lg-5">
+                    <p>はじまりたての教室です。<strong>モニターを募集</strong>しております。</p>
+                    <ul>
+                        <li>初回相談無料 (目安: 1時間)</li>
+                        <li>無料相談の後、授業はすべてモニター価格で一回330円 (延長OK・延長料金なし、疲れてしまうので目安1時間) </li>
+                        <li>Zoom または Google Meet</li>
+                        <li>YouTubeに授業風景サンプルをUPさせていただける、顔出しOKモニターの方も募集しております。<br>
+                            モニターの方は、無料で受けていただくことができます。</li>
+                    </ul>
+                    <p>
+                        お子さんのみでも、保護者の方だけでも、お子さんと保護者の方がご一緒でも、<br>
+                        お友達と一緒でも、いずれの受講スタイルでもOKです。
+                    </p>
+                    <p>初回の無料相談や、事前のテキストでのヒアリングで、教室に期待することをお聞かせください。<br>
+                        音声のみ、またはチャット相談でも大丈夫です。その際はお金はかかりません。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="text-center mb-4">
+                <h2 class="section-title">お問い合わせ</h2>
+            </div>
+            <div class="card">
+                <div class="card-body p-4 p-lg-5">
+                    <p>お気軽に、<a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfjght5i-M46ChTfmv_MHTf9o5BMrvoffP0sl92t1y2f2Mnbg/viewform">こちらのGoogleフォーム</a>からご連絡ください。<br>
+                        Googleフォーム以外を使いたいという方は、以下のフォーマットから直接メールをお送りください。<br>
+                        SNSをご存じでしたら、そちらからでも大丈夫です。<br>
+                        <strong>メールアドレスは、スパム対策のため、[ここにアットマークを記載]の部分を@に置き換えてください。</strong>
+                    </p>
+                    <table>
+                        <tr>
+                            <td>宛先</td>
+                            <td>sakurapancakeore[ここにアットマークを記載]gmail.com</td>
+                        </tr>
+                        <tr>
+                            <td>ご連絡先</td>
+                            <td>メール送信元に返信します。</td>
+                        </tr>
+                        <tr>
+                            <td>タイトル</td>
+                            <td>プログラミング教室無料相談希望</td>
+                        </tr>
+                        <tr>
+                            <td>本文</td>
+                            <td>月〜土　11:00am〜21:00まで<br>
+                                <br>
+                                第1候補日時:<br>
+                                <br>
+                                第2候補日時:<br>
+                                <br>
+                                第3候補日時:
+                            </td>
+                        </tr>
+                    </table>
+
+                    <h3>大人には教えていないの？</h3>
+                    <p>メインではないのですが、大学生〜高齢者の方のプログラミング教室・相談も承っています。</p>
+                    <ul>
+                        <li>社内でIT技術の資格試験を取るように言われたが、どうしてもわからないところがある</li>
+                        <li>実装上の悩み、難しい分野のガチめの相談</li>
+                        <li>etc,etc...
+                            <ul>
+                                <li>講師の専門外の分野は、2週間予習時間を頂ければお答えできます。その際は、事前にご相談ください。(追加料金なし)</li>
+                                <li>報奨金が出ている分野に関しては、尽力はしますが、そのものずばりの指摘はおそらくできかねます。能力不足のためです。ただし、ヒントは出せる可能性は少しあります。</li>
+                            </ul>
+                        </li>
+                        <li>他、コンピューターのどんな悩みでもお話を聞きます。内容によっては手に余る場合がありますが、できるだけお応えしたい方針です。</li>
+                    </ul>
+                    <p>
+                        お気軽にお問い合わせください。メールが反応しやすいですが、他の連絡手段をご存知でしたらそちらからでも大丈夫です。<br>
+                        チャット相談に関してはメールで行っています。<br>
+                        学習のロードマップを立て、定期的に授業をするなどの提案も大歓迎ですので、お気軽にどうぞ！<br>
+                        <br>
+                        技術的なことになると、大人の場合は一回1時間ほどで3000円(2023.7.25-)になりますが、<br>
+                        それ以外のことは素人ですので、無料でご相談に乗ります。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="profile">
+            <div class="text-center mb-4">
+                <h2 class="section-title">講師紹介</h2>
+            </div>
+            <div class="card">
+                <div class="card-body p-4 p-lg-5">
+                    <div class="row align-items-center g-4">
+                        <div class="col-md-3 text-center">
+                            <img src="./images/fb_face.jpg" alt="VTuberアバターのイラストです。自作です。" class="di-school-profile-img">
+                        </div>
+                        <div class="col-md-9">
+                            <p class="mb-0">
+                                いりきだ もえ<br>
+                                1986年生まれ。女性。神奈川県横浜市出身。<br>
+                                フェリス女学院中高卒業後、Macromedia Flashの仕事がしたくて横浜デジタルアーツ専門学校に入学。<br>
+                                Flashはセンスの関係で諦め、卒業後はWebエンジニアとして株式会社ドワンゴに新卒入社。<br>
+                                ニコニコ動画の黎明期からの道のりを内部から眺めていました。<br>
+                                2022年10月にドワンゴを退職し、フリーランスのエンジニアとして活動しています。<br>
+                                子どもはいませんが、子どもが好きなので、当教室を開講しました。<br>
+                                趣味は絵を描くこと、VTuber配信鑑賞、カラオケ、乗り鉄、読書、絵を描くこと。<br>
+                                <a href="https://irimo.github.io">さらに詳しいことはこちらに書いています。</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-5">
+        &copy; 2025 Moe Irikida. All Rights Reserved.<br>
+        since 1999.10 / re-open 2011.10 / moved 2018.1
+    </footer>
 </body>
+
 </html>
